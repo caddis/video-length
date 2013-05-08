@@ -2,7 +2,7 @@
 
 $plugin_info = array (
 	'pi_name' => 'Video Length',
-	'pi_version' => '1.0',
+	'pi_version' => '1.1.0',
 	'pi_author' => 'Michael Leigeber',
 	'pi_author_url' => 'http://www.caddis.co',
 	'pi_description' => 'Return MM:SS from inputted seconds.',
@@ -24,7 +24,7 @@ class Video_length
 		
 		if ($seconds && is_numeric($seconds))
 		{
-			$seconds = ceil($seconds);
+			$seconds = floor($seconds);
 		
 			$hours = floor( $seconds / 3600 );
 			$mins = floor( ( $seconds - ( $hours * 3600) ) / 60 );
