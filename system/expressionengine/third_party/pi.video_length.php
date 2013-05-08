@@ -9,8 +9,8 @@ $plugin_info = array (
 	'pi_usage' => Video_length::usage()
 );
 
-class Video_length
-{
+class Video_length {
+
 	public $return_data = '';
 
 	function __construct()
