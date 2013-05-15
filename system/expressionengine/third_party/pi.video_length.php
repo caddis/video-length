@@ -13,7 +13,7 @@ class Video_length {
 
 	public $return_data = '';
 
-	function __construct()
+	public function __construct()
 	{
 		$this->EE =& get_instance();
 
@@ -40,9 +40,9 @@ class Video_length {
 		$this->return_data = $time;
 	}
 
-	function usage()
+	public static function usage()
 	{
-		ob_start(); 
+		ob_start();
 ?>
 Parameters:
 
@@ -54,7 +54,7 @@ Usage:
 <?php
 		$buffer = ob_get_contents();
 
-		ob_end_clean(); 
+		ob_end_clean();
 
 		return $buffer;
 	}
