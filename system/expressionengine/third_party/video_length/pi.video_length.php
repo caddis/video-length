@@ -1,9 +1,9 @@
-<?php if (!defined('BASEPATH')) exit('No direct script access allowed');
+<?php if (! defined('BASEPATH')) exit('No direct script access allowed');
 
 $plugin_info = array (
 	'pi_name' => 'Video Length',
-	'pi_version' => '1.1.0',
-	'pi_author' => 'Michael Leigeber',
+	'pi_version' => '1.1.1',
+	'pi_author' => 'Caddis',
 	'pi_author_url' => 'http://www.caddis.co',
 	'pi_description' => 'Return HH:MM:SS from inputted seconds.',
 	'pi_usage' => Video_length::usage()
@@ -22,8 +22,7 @@ class Video_length {
 
 		$time = '';
 
-		if ($seconds !== false && is_numeric($seconds))
-		{
+		if ($seconds !== false and is_numeric($seconds)) {
 			$seconds = floor($seconds);
 
 			$hrs = floor($seconds / 3600 );
